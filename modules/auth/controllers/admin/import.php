@@ -120,153 +120,6 @@ class Import extends Admin_Controller
 		}
 	}
 
-    function __preview($file){
-        //$file = trim($this->session->userdata['importfile']);
-
-        $data['file'] = $file;
-        
-        $file = trim($this->config->item('public_folder').'xls/'.$file);
-
-        
-        $this->load->library('excel');
-
-        $xlsdata = $this->excel->load($file);
-
-        //print_r($xlsdata);
-
-        $invalids = array();
-        $email_col = 0;
-        $dup_email = 0;
-        $dup_user = 0;
-        
-        $validator = array_merge($this->config->item('import_valid_column'),$this->config->item('sc_valid'),$this->config->item('conv_valid'),$this->config->item('ex_valid'));
-        for ($i = 2; $i <= $xlsdata['numRows']; $i++) {
-            for ($j = 1; $j <= $xlsdata['numCols']; $j++) {
-                if($i == 2){
-                    if(!$xlsdata['cells'][$i][$j] == '' && !in_array($xlsdata['cells'][$i][$j],$validator)){
-                        $invalids[] = array('col'=>$j,'val'=>$xlsdata['cells'][$i][$j]);
-                    }
-                    if($xlsdata['cells'][$i][$j] == 'email'){
-                        $email_col = $j;
-                    }
-                    if($xlsdata['cells'][$i][$j] == 'username'){
-                        $user_col = $j;
-                    }
-                }else if($j == $email_col && $i > 1){
-                    if(!$this->validation->spare_email($xlsdata['cells'][$i][$email_col])){
-                        $dup_email++;
-                    }
-                }else if($j == $user_col && $i > 1){
-                    if(!$this->validation->spare_username($xlsdata['cells'][$i][$user_col])){
-                        $dup_user++;
-                    }
-                }
-            }
-        }
-
-        $data['xlsdata'] = $xlsdata;
-
-        $data['pic'] = $this->session->userdata('picemail');
-        $data['picname'] = $this->session->userdata('picname');
-        $data['mobilephone'] = $this->session->userdata('mobilephone');
-        $data['company'] = $this->session->userdata('company');
-        $data['companyaddress'] = $this->session->userdata('companyaddress');
-        $data['companynpwp'] = $this->session->userdata('companynpwp');
-        $data['companyphone'] = $this->session->userdata('companyphone');
-        $data['invalids'] = $invalids;
-        $data['email_col'] = $email_col;
-        $data['dup_email'] = $dup_email;
-        $data['dup_user'] = $dup_user;
-
-        // Display page
-        $data['header'] = "Uploaded Excel Preview";
-        $data['page'] = $this->config->item('backendpro_template_admin') . 'import/preview';
-        $data['module'] = 'auth';
-        $this->load->view($this->_container,$data);
-    }
-
-    function ____preview($file){
-        
-        //$file = trim($this->session->userdata['importfile']);
-
-        $data['file'] = $file;
-		
-        $file = trim($this->config->item('public_folder').'xls/'.$file);
-
-        //print $file;
-        
-		// Load the spreadsheet reader library
-		//@$this->load->library('spreadsheet_excel_reader');
-
-		// Set output Encoding.
-		//$this->spreadsheet_excel_reader->setOutputEncoding('CP1251');
-		//$this->spreadsheet_excel_reader->read($file);
-
-		//error_reporting(~E_ALL || ~E_STRICT);
-        
-		// Sheet 1
-		//$xlsdata = @$this->spreadsheet_excel_reader->sheets[0] ;
-		
-		//validating
-
-        $this->load->library('excel');
-
-        $xlsdata = $this->excel->load($file);
-
-
-        $invalids = array();
-        $email_col = 0;
-        $dup_email = 0;
-        $dup_user = 0;
-        
-        $validator = array_merge($this->config->item('import_valid_column'),$this->config->item('sc_valid'),$this->config->item('conv_valid'),$this->config->item('ex_valid'));
-        for ($i = 2; $i <= $xlsdata['numRows']; $i++) {
-    		for ($j = 1; $j <= $xlsdata['numCols']; $j++) {
-    		    if($i == 2){
-        		    if(!$xlsdata['cells'][$i][$j] == '' && !in_array($xlsdata['cells'][$i][$j],$validator)){
-        		        $invalids[] = array('col'=>$j,'val'=>$xlsdata['cells'][$i][$j]);
-        		    }
-        	        if($xlsdata['cells'][$i][$j] == 'email'){
-        	            $email_col = $j;
-        	        }
-        	        if($xlsdata['cells'][$i][$j] == 'username'){
-        	            $user_col = $j;
-        	        }
-    		    }else if($j == $email_col && $i > 1){
-    		        if(!$this->validation->spare_email($xlsdata['cells'][$i][$email_col])){
-        		        $dup_email++;
-        		    }
-    		    }else if($j == $user_col && $i > 1){
-    		        if(!$this->validation->spare_username($xlsdata['cells'][$i][$user_col])){
-        		        $dup_user++;
-        		    }
-    		    }
-    		}
-        }
-
-        $data['xlsdata'] = $xlsdata;
-        
-		
-		$data['pic'] = $this->session->userdata('picemail');
-		$data['picname'] = $this->session->userdata('picname');
-		$data['company'] = $this->session->userdata('company');
-	    $data['companyaddress'] = $this->session->userdata('companyaddress');
-		$data['invalids'] = $invalids;
-		$data['email_col'] = $email_col;
-		$data['dup_email'] = $dup_email;
-		$data['dup_user'] = $dup_user;
-		$data['sheet'] =  $this->spreadsheet_excel_reader->dump(true,true);
-		
-
-		// Display page
-		$data['header'] = "Uploaded Excel Preview";
-		$data['page'] = $this->config->item('backendpro_template_admin') . 'import/preview';
-		$data['module'] = 'auth';
-		$this->load->view($this->_container,$data);
-    }
-
-
-
     function preview($file){
         
         $data['file'] = $file;
@@ -545,6 +398,16 @@ class Import extends Admin_Controller
                 $user['registrationtype'] = 'Booth Assistant';
                 $fee = ($data['user_profiles']['foc'] == 1 )?0:$user['registertype'];
                 $total_idr = $fee;//ipa36 if BA then all other fees omitted
+
+                $user['golf'] = 'No';
+                $user['galadinner'] = 'No';
+                $user['galadinneraux1'] = 'No';
+                $user['galadinneraux2'] = 'No';
+                $user['judge'] = 'No';
+
+                //print $user['registertype']."\r\n";
+                //print $fee."\r\n";
+                //print $total_idr."\r\n";
             }                                                      
 
 
@@ -596,6 +459,7 @@ class Import extends Admin_Controller
                 $data['user_profiles']['galadinneraux2'] = $user['galadinneraux2'];
             }
 
+            /*
             if(isset($user['ba30'])){                                                             
                 $user['ba30'] = (strtolower($user['ba30']) === 'yes')?$this->config->item('ba30'):0;
                 $total_idr += (int) $user['ba30'];
@@ -609,6 +473,7 @@ class Import extends Admin_Controller
 
                 $data['user_profiles']['ba150'] = $user['ba150'];
             }
+            */
 
             $user['total_idr'] = $total_idr;
             $user['total_usd'] = $total_usd;
@@ -627,8 +492,6 @@ class Import extends Admin_Controller
                 $cindex = 'non_member';
             }
 
-
-
             $user['course_1'] = (strtolower($user['course_1']) == 'yes')?$this->config->item('course_1_'.$cindex):0;
             $user['course_2'] = (strtolower($user['course_2']) == 'yes')?$this->config->item('course_2_'.$cindex):0;
             $user['course_3'] = (strtolower($user['course_3']) == 'yes')?$this->config->item('course_3_'.$cindex):0;
@@ -639,16 +502,16 @@ class Import extends Admin_Controller
             $user['total_usd_sc'] = $user['course_1'] + $user['course_2'] + $user['course_3'] + $user['course_4'] + $user['course_5'];
             
 //            if($user['total_usd_sc'] != 0 || $user['total_idr_sc'] != 0){
-                $data['user_profiles']['course_1'] = $user['course_1'];
-                $data['user_profiles']['course_2'] = $user['course_2'];
-                $data['user_profiles']['course_3'] = $user['course_3'];
-                $data['user_profiles']['course_4'] = $user['course_4'];
-                $data['user_profiles']['course_5'] = $user['course_5'];
-                if($user['invoice_address_sc'] != ''){
-                    $data['user_profiles']['invoice_address_sc'] = $user['invoice_address_sc'];
-                }
-                $data['user_profiles']['total_idr_sc'] = $user['total_idr_sc'];
-                $data['user_profiles']['total_usd_sc'] = $user['total_usd_sc'];
+            $data['user_profiles']['course_1'] = $user['course_1'];
+            $data['user_profiles']['course_2'] = $user['course_2'];
+            $data['user_profiles']['course_3'] = $user['course_3'];
+            $data['user_profiles']['course_4'] = $user['course_4'];
+            $data['user_profiles']['course_5'] = $user['course_5'];
+            if($user['invoice_address_sc'] != ''){
+                $data['user_profiles']['invoice_address_sc'] = $user['invoice_address_sc'];
+            }
+            $data['user_profiles']['total_idr_sc'] = $user['total_idr_sc'];
+            $data['user_profiles']['total_usd_sc'] = $user['total_usd_sc'];
 //            }
 
             //omit all null values
@@ -759,64 +622,64 @@ class Import extends Admin_Controller
         //print "summary data\r\n";
         //print $picemail." | ".$picname."\r\n"; 
         
-        //print_r($summarydata);
         
             //$this->load->library('custom_qr');
             
-            $counter = 0;
-            foreach($summarydata as $udata){
-                                
-                //print_r($udata);
-                $udata['users']['course_1'] = 0;
-                $udata['users']['course_2'] = 0;
-                $udata['users']['course_3'] = 0;
-                $udata['users']['course_4'] = 0;
-                $udata['users']['course_5'] = 0;
+        $counter = 0;
 
-                $mergeddata = array_merge($udata['users'],$udata['user_profiles']);
-                $conv_id =  $this->_updateregistrationnumber($mergeddata);
-                
-                //print $conv_id."\r\n";
-                
-                $udata['user_profiles']['conv_id'] = $conv_id;
-                $summarydata[$counter]['user_profiles']['conv_id'] = $conv_id;
-                $counter++;
-                
-                $qrdata = array();
-                $qrdata[] = 'uid:'.$udata['users']['id'];
-                $qrdata[] = 'name:'.$udata['user_profiles']['firstname'].' '.$udata['user_profiles']['lastname'];
-                $qrdata[] = 'email:'.$udata['users']['email'];
+        foreach($summarydata as $udata){
+                            
+            //print_r($udata);
+            $udata['users']['course_1'] = 0;
+            $udata['users']['course_2'] = 0;
+            $udata['users']['course_3'] = 0;
+            $udata['users']['course_4'] = 0;
+            $udata['users']['course_5'] = 0;
 
-                //print_r($udata);
-                $qrdata = implode("\r\n",$qrdata);
-                
-                //$this->custom_qr->generateQRcode($udata['id'].'_qr.png',$qrdata);
-                
-                //$this->_generateQR($udata['users']['id'].'_qr.png',$qrdata);
 
-                $this->_generateBarcode($udata['users']['id'].'_bar.png',$qrdata);
+            $mergeddata = array_merge($udata['users'],$udata['user_profiles']);
+            $conv_id =  $this->_updateregistrationnumber($mergeddata);
+            
+            //print_r($mergeddata);
+            //print $conv_id."\r\n";
+            
+            $udata['user_profiles']['conv_id'] = $conv_id;
+            $summarydata[$counter]['user_profiles']['conv_id'] = $conv_id;
+            $counter++;
+            
+            $qrdata = array();
+            $qrdata[] = 'uid:'.$udata['users']['id'];
+            $qrdata[] = 'name:'.$udata['user_profiles']['firstname'].' '.$udata['user_profiles']['lastname'];
+            $qrdata[] = 'email:'.$udata['users']['email'];
 
-                if($importasgroup){
-                    if($sendmember == 'yes'){
-                        if($udata['action'] == 'insert'){
-                            // send notification to each user
-                            $this->_sendregistermail($udata,$picarray);
-                        }
-                        $edata = $this->_sendnotification($picemail,$picname,$udata);
+            //print_r($udata);
+            $qrdata = implode("\r\n",$qrdata);
+            
+            //$this->custom_qr->generateQRcode($udata['id'].'_qr.png',$qrdata);
+            
+            //$this->_generateQR($udata['users']['id'].'_qr.png',$qrdata);
+
+            $this->_generateBarcode($udata['users']['id'].'_bar.png',$qrdata);
+
+            if($importasgroup){
+                if($sendmember == 'yes'){
+                    if($udata['action'] == 'insert'){
+                        // send notification to each user
+                        $this->_sendregistermail($udata,$picarray);
                     }
-                }else{
-                    if($sendmember == 'yes'){
-                        if($udata['action'] == 'insert'){
-                            // send notification to each user
-                            $this->_sendregistermail($udata,$picarray);
-                        }
-                        $edata = $this->_sendindividualnotification($picemail,$picname,$udata);
-                    }                    
+                    $edata = $this->_sendnotification($picemail,$picname,$udata);
                 }
-
-                // send to individual
+            }else{
+                if($sendmember == 'yes'){
+                    if($udata['action'] == 'insert'){
+                        // send notification to each user
+                        $this->_sendregistermail($udata,$picarray);
+                    }
+                    $edata = $this->_sendindividualnotification($picemail,$picname,$udata);
+                }                    
             }
-
+            // send to individual
+        }
         
         $this->_sendtopic($picemail,$picname,$picmobile,$company,$companyphone,$companynpwp,$companyaddress,$summarydata,$sendpass,$forceupdate);
         
@@ -1194,7 +1057,6 @@ class Import extends Admin_Controller
 		);
 
 	    $this->user_email->send($data['users']['email'],$this->lang->line('userlib_email_register'),'public/email_register_nopass',$edata);
-		
 	}
 
     function _sendtopic($picemail,$picname,$picmobile,$company,$companyphone,$companynpwp,$companyaddress,$summarydata,$sendpass,$forceupdate){
@@ -1334,9 +1196,9 @@ class Import extends Admin_Controller
                 $po_amt += ($user['registrationtype'] == 'Professional Overseas')?$user['registertype']:0;
                 $sd_amt += ($user['registrationtype'] == 'Student Domestic')?$user['registertype']:0;
                 $so_amt += ($user['registrationtype'] == 'Student Overseas')?$user['registertype']:0;
-                $ba_amt += ($user['registrationtype'] == 'Booth Assistant')?$user['ba30']+$user['ba150']:0;
+                $ba_amt += ($user['registrationtype'] == 'Booth Assistant')?$user['registertype']:0;
                 
-                if($user['registrationtype'] == 'Professional Domestic' || $user['registrationtype'] == 'Student Domestic'){
+                if($user['registrationtype'] == 'Professional Domestic' || $user['registrationtype'] == 'Student Domestic' || $user['registrationtype'] == 'Booth Assistant'){
                     $total_idr += $user['registertype'];
                 }         
 
@@ -1361,6 +1223,8 @@ class Import extends Admin_Controller
             $exhibitor_foc += ($user['foc'] == 1)?1:0;
 
             $total_idr += $user['golf'] + $user['galadinner'] + $user['galadinneraux'] + $user['galadinneraux2'];
+
+
 
             $short_cnt += ($user['course_1'] + $user['course_2'] + $user['course_3'] + $user['course_4'] + $user['course_5'] == 0)?0:1;
             $short_amt += $user['course_1'] + $user['course_2'] + $user['course_3'] + $user['course_4'] + $user['course_5'];
@@ -1477,109 +1341,7 @@ class Import extends Admin_Controller
 		
 		//print_r($edata);
 	    $this->user_email->send($picemail,$this->lang->line('userlib_email_register'),'public/ipa36_email_group',$edata);
-        
-        
-/*        
-        $this->load->library('parser');
-        
-        foreach($recapdata as $user){
             
-            //print_r($user);
-            
-    		$street2 = ($user['street2'] =='')?"":"\r\n".$user['street2'];
-
-    		$is_conv = ($user['registrationtype'] == '')?false:true;
-    		$is_short = ($user['course_1'] + $user['course_2'] + $user['course_3'] + $user['course_4'] + $user['course_5'] == 0)?false:true;
-            
-            if($user['foc'] > 0){
-                $user['total_usd'] = $user['total_usd'] - $user['registertype'];
-                $user['total_idr'] = $user['total_idr'] - $user['registertype'];
-            }
-            
-            $grand_total_usd_sc += $user['total_usd_sc'];
-            $grand_total_idr_sc += $user['total_idr_sc'];
-            $grand_total_usd += $user['total_usd'];
-            $grand_total_idr += $user['total_idr'];
-            
-            $userdetail = array(
-                'fullname'=>$user['fullname']
-            );
-            
-            //convention
-            $convention = array(
-                'registercurr'=> ($user['registrationtype'] == 'Professional Domestic' || $user['registrationtype'] == 'Student Domestic')?'IDR':'USD',
-                'registertype'=> ($user['foc'] == 0)?number_format($user['registertype']):'FoC Exhibitor',
-                'registrationtype'=> $user['registrationtype'],
-                'judge' => ($user['judge'] == 'yes')?'Yes':'No',
-                'golf' => ($user['golf'] == 0)?'No':'IDR '.number_format($user['golf']),
-                'golfwait' => ($user['golfwait'] > 0)?'Yes':'No',
-                'galadinner' => ($user['galadinner'] == 0)?'No':'IDR '.number_format($user['galadinner']),
-                'total_usd' => ($user['foc'] == 0)?number_format($user['total_usd']):'FoC Exhibitor',
-                'total_idr' => ($user['foc'] == 0)?number_format($user['total_idr']):'FoC Exhibitor'
-            );
-
-            $short = array(
-                //short course
-                'course_1' => ($user['course_1'] == 0)?'Not Attending':'USD '.$user['course_1'],
-                'course_2' => ($user['course_2'] == 0)?'Not Attending':'USD '.$user['course_2'],
-                'course_3' => ($user['course_3'] == 0)?'Not Attending':'USD '.$user['course_3'],
-                'course_4' => ($user['course_4'] == 0)?'Not Attending':'USD '.$user['course_4'],
-                'course_5' => ($user['course_5'] == 0)?'Not Attending':'USD '.$user['course_5'],
-                'total_usd_sc' => number_format($user['total_usd_sc']),
-                'total_idr_sc' => number_format($user['total_idr_sc'])
-            );
-
-
-            $ex = array(
-                //short course
-                'exhibitor' => ($user['exhibitor'] == 0)?'No':'Yes',
-                'foc' => ($user['foc'] == 0)?'No':'Yes',
-                'media' => ($user['media'] == 0)?'No':'Yes'
-            );
-
-            
-            
-            $user_detail = $this->parser->parse('email/user_detail',$userdetail,true);
-            $ex_detail = $this->parser->parse('email/exhibitor_detail_cp',$ex,true);
-
-            if($is_conv){
-                $convention_detail = $this->parser->parse('email/convention_detail_pic',$convention,true);
-            }else{
-                $convention_detail = "Not Registered for Convention";
-            }
-
-            if($is_short){
-                $shortcourse_detail = $this->parser->parse('email/shortcourse_detail_pic',$short,true);
-            }else{
-                $shortcourse_detail = "Not registered to attend any Short Course";
-            }
-            
-            $recap .= $user_detail."\r\n".$convention_detail."\r\n".$shortcourse_detail."\r\n".$ex_detail;
-        }
-        
-        
-        $edata = array(
-		        'reg_date'=>date('d-m-Y', time()),
-                'company' =>$company,
-                'companyaddress'=>$companyaddress,
-                'picemail'=>$picemail,
-                'picname'=>$picname,
-                
-                'recapdata' => $recap,
-                'grand_total_usd' => number_format($grand_total_usd),
-                'grand_total_idr' => number_format($grand_total_idr),
-                'grand_total_usd_sc' => number_format($grand_total_usd_sc),
-                'grand_total_idr_sc' => number_format($grand_total_idr_sc),
-                
-                'site_name'=>$this->preference->item('site_name'),
-                'site_url'=>base_url()
-		);
-		
-		//print_r($edata);
-	    $this->user_email->send($picemail,$this->lang->line('userlib_email_register'),'public/email_pic_digest',$edata);
-*/    
-    
-    
     }
 
     function _sendnotification($picemail,$picname,$data){
@@ -1645,102 +1407,6 @@ class Import extends Admin_Controller
         $this->user_email->send($edata['email'],'Notification Letter for Individual','public/ipa36_email_individual',$edata);
     }
 
-	
-	function ___sendnotification($picemail,$picname,$data){
-	    
-	    //$user = $this->user_model->getUsers(array('users.id'=>$id));
-		//$user = $user->row_array();
-
-        print_r($data);
-		
-		$user = $data['users'];
-		$profile = $data['user_profiles'];
-		$user = array_merge($user,$profile);
-		
-		
-		$street2 = ($user['street2'] =='')?"":"\r\n".$user['street2'];
-		
-		$is_conv = ($user['registrationtype'] == '')?false:true;
-		$is_short = ($user['course_1'] + $user['course_2'] + $user['course_3'] + $user['course_4'] + $user['course_5'] == 0)?false:true;
-
-        //convention
-        $convention = array(
-            'registercurr'=> ($user['registrationtype'] == 'Professional Domestic' || $user['registrationtype'] == 'Student Domestic')?'IDR':'USD',
-            'registertype'=> number_format($user['registertype']),
-            'registrationtype'=> $user['registrationtype'],
-            'judge' => ($user['judge'] == 'yes')?'Yes':'No',
-            'golf' => ($user['golf'] == 0)?'No':'Yes',
-            'golfwait' => ($user['golfwait'] > 0)?'Yes':'No',
-            'galadinner' => ($user['galadinner'] == 0)?'No':'Yes',
-            'total_usd' => number_format($user['total_usd']),
-            'total_idr' => number_format($user['total_idr'])
-        );
-
-        $short = array(
-            //short course
-            'course_1' => ($user['course_1'] == 0)?'No':'Yes',
-            'course_2' => ($user['course_2'] == 0)?'No':'Yes',
-            'course_3' => ($user['course_3'] == 0)?'No':'Yes',
-            'course_4' => ($user['course_4'] == 0)?'No':'Yes',
-            'course_5' => ($user['course_5'] == 0)?'No':'Yes',
-            'total_usd_sc' => number_format($user['total_usd_sc']),
-            'total_idr_sc' => number_format($user['total_idr_sc'])
-        );
-        
-        $ex = array(
-            //exhibitor
-            'exhibitor' => ($user['exhibitor'] == 1)?'Yes':'No',
-            'foc' => ($user['foc'] == 1)?'Yes':'No',
-            'media' => ($user['media'] == 1)?'Yes':'No'
-        );
-
-        $this->load->library('parser');
-        
-        $exhibitor_detail = $this->parser->parse('email/exhibitor_detail_cp',$ex,true);
-        
-                    
-        if($is_conv){
-            $convention_detail = $this->parser->parse('email/convention_detail_cp',$convention,true);
-        }else{
-            $convention_detail = "Not Registered for Convention";
-        }
-
-        if($is_short){
-            $shortcourse_detail = $this->parser->parse('email/shortcourse_detail_cp',$short,true);
-        }else{
-            $shortcourse_detail = "Not registered to attend any Short Course";
-        }
-		
-		
-		$edata = array(
-		        'reg_date'=>date('d-m-Y', time()),
-                'username'=> $user['username'],
-                'salutation' => $user['salutation'],
-                'fullname'=> $user['firstname'].' '.$user['lastname'],
-                'company' =>$user['company'],
-                'companyaddress'=>$user['street'].$street2."\r\n".$user['city']." ".$user['zip']."\r\n".$user['country'],
-                'email'=> $user['email'],
-                'conv_id'=> $user['conv_id'],
-                'picemail'=>$picemail,
-                'picname'=>$picname,
-                
-                'convention_detail'=>$convention_detail,
-                'shortcourse_detail'=>$shortcourse_detail,
-                'exhibitor_detail'=>$exhibitor_detail,
-
-                'grand_total_usd' => $user['total_usd_sc'] + $user['total_usd'],
-                'grand_total_idr' => $user['total_idr_sc'] + $user['total_idr'],
-                
-                'site_name'=>$this->preference->item('site_name'),
-                'site_url'=>base_url(),
-                'email'=>$user['email']
-		);
-		
-		//print_r( $edata);
-	    $this->user_email->send($edata['email'],'Convention & Short Courses Registration','public/email_member_bulk',$edata);
-	    
-	}
-
     function _sendindividualnotification($picemail,$picname,$data){
 
         $user = $data['users'];
@@ -1805,104 +1471,6 @@ class Import extends Admin_Controller
         $this->user_email->send($edata['email'],'Notification Letter for Individual','public/ipa36_email_individual',$edata);
     }
 
-    function ___sendindividualnotification($picemail,$picname,$data){
-        
-        //$user = $this->user_model->getUsers(array('users.id'=>$id));
-        //$user = $user->row_array();
-
-        print_r($data);
-        
-        $user = $data['users'];
-        $profile = $data['user_profiles'];
-        $user = array_merge($user,$profile);
-        
-        //print_r($user);
-        
-        $street2 = ($user['street2'] =='')?"":"\r\n".$user['street2'];
-        
-        $is_conv = ($user['registrationtype'] == '')?false:true;
-        $is_short = ($user['course_1'] + $user['course_2'] + $user['course_3'] + $user['course_4'] + $user['course_5'] == 0)?false:true;
-
-        //convention
-        $convention = array(
-            'registercurr'=> ($user['registrationtype'] == 'Professional Domestic' || $user['registrationtype'] == 'Student Domestic')?'IDR':'USD',
-            'registertype'=> number_format($user['registertype']),
-            'registrationtype'=> $user['registrationtype'],
-            'judge' => ($user['judge'] == 'yes')?'Yes':'No',
-            'golf' => ($user['golf'] == 0)?'No':'Yes',
-            'golfwait' => ($user['golfwait'] > 0)?'Yes':'No',
-            'galadinner' => ($user['galadinner'] == 0)?'No':'Yes',
-            'total_usd' => number_format($user['total_usd']),
-            'total_idr' => number_format($user['total_idr'])
-        );
-
-        $short = array(
-            //short course
-            'course_1' => ($user['course_1'] == 0)?'No':'Yes',
-            'course_2' => ($user['course_2'] == 0)?'No':'Yes',
-            'course_3' => ($user['course_3'] == 0)?'No':'Yes',
-            'course_4' => ($user['course_4'] == 0)?'No':'Yes',
-            'course_5' => ($user['course_5'] == 0)?'No':'Yes',
-            'total_usd_sc' => number_format($user['total_usd_sc']),
-            'total_idr_sc' => number_format($user['total_idr_sc'])
-        );
-        
-        $ex = array(
-            //exhibitor
-            'exhibitor' => ($user['exhibitor'] == 1)?'Yes':'No',
-            'foc' => ($user['foc'] == 1)?'Yes':'No',
-            'media' => ($user['media'] == 1)?'Yes':'No'
-        );
-
-        $this->load->library('parser');
-
-        $individual_detail = $this->parser->parse('email/ipa36_individual_detail',$user,true);
-        
-        $exhibitor_detail = $this->parser->parse('email/exhibitor_detail_cp',$ex,true);
-        
-                    
-        if($is_conv){
-            $convention_detail = $this->parser->parse('email/convention_detail_cp',$convention,true);
-        }else{
-            $convention_detail = "Not Registered for Convention";
-        }
-
-        if($is_short){
-            $shortcourse_detail = $this->parser->parse('email/shortcourse_detail_cp',$short,true);
-        }else{
-            $shortcourse_detail = "Not registered to attend any Short Course";
-        }
-        
-        
-        $edata = array(
-                'reg_date'=>date('d-m-Y', time()),
-                'username'=> $user['username'],
-                'salutation' => $user['salutation'],
-                'fullname'=> $user['firstname'].' '.$user['lastname'],
-                'company' =>$user['company'],
-                'companyaddress'=>$user['street'].$street2."\r\n".$user['city']." ".$user['zip']."\r\n".$user['country'],
-                'email'=> $user['email'],
-                'conv_id'=> $user['conv_id'],
-                'picemail'=>$picemail,
-                'picname'=>$picname,
-                
-                'convention_detail'=>$convention_detail,
-                'shortcourse_detail'=>$shortcourse_detail,
-                'exhibitor_detail'=>$exhibitor_detail,
-
-                'grand_total_usd' => $user['total_usd_sc'] + $user['total_usd'],
-                'grand_total_idr' => $user['total_idr_sc'] + $user['total_idr'],
-                
-                'site_name'=>$this->preference->item('site_name'),
-                'site_url'=>base_url(),
-                'email'=>$user['email']
-        );
-        
-        //print_r($edata);
-        $this->user_email->send($edata['email'],'Convention & Short Courses Registration','public/email_member_bulk',$edata);
-        
-    }
-	
 	function _increment_field($field,$id){
 	    return $this->user_model->increment_field($field,$id);
 	}	

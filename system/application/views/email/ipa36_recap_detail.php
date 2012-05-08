@@ -8,6 +8,8 @@
 ?>
 <?php foreach($recapdata as $p):?>
 	<?php
+		//print_r($p);
+
 		$total_golf += $p['golf'];
 		$galadinner = $p['galadinner'] + $p['galadinneraux'] + $p['galadinneraux2'];
 		$total_galadinner += $galadinner; 
@@ -19,7 +21,8 @@
 			$conv_fee = 'USD '.number_format($p['registertype'],2,',','.');
 			$total_con_usd +=($p['foc'] == 0)?$p['registertype']:0;
 		}else if($p['registrationtype'] == 'Booth Assistant'){
-			$total_con_ba +=($p['ba30'] == 0)?$p['ba150']:$p['ba30'];
+			$conv_fee = '-';
+			$total_con_ba +=$p['registertype'];
 		}
 
 	?>	
@@ -31,14 +34,10 @@
 					<td><?php print $conv_fee;?></td>
 					<td><?php print ($p['exhibitor'] == 0)?'no':'yes';?></td>
 					<td><?php 
-						if($p['ba30'] == 0 || $p['ba150'] == 0){
-							print 'No';
-						}else if($p['ba30'] > 0 && $p['ba150'] == 0){
-							print $p['ba30'];
-						}else if($p['ba30'] == 0 && $p['ba150'] > 0){
-							print $p['baq50'];
+						if($p['ba30'] > 0 || $p['ba150'] > 0){
+							print 'IDR '.number_format($p['registertype'],2,',','.');
 						}else{
-							print 'Yes';
+							print '-';
 						}
 					?></td>
 					<td><?php print number_format($p['golf'],2,',','.');?></td>
@@ -47,14 +46,14 @@
 <?php endforeach;?>
 				<tr>
 					<td rowspan="2" colspan="4">GRAND TOTAL</td>
-					<td><?php print 'IDR '.number_format($total_con_idr,2,',','.');?></td>
+					<td><?php print ($total_con_idr > 0)?'IDR '.number_format($total_con_idr,2,',','.'):'-';?></td>
 					<td>-</td>
-					<td><?php print number_format($total_con_ba,2,',','.');?></td>
+					<td><?php print 'IDR '.number_format($total_con_ba,2,',','.');?></td>
 					<td><?php print number_format($total_golf,2,',','.');?></td>
 					<td><?php print number_format($total_galadinner,2,',','.');?></td>
 				</tr>
 				<tr>
-					<td><?php print 'USD '.number_format($total_con_usd,2,',','.');?></td>
+					<td><?php print ($total_con_usd > 0)?'USD '.number_format($total_con_usd,2,',','.'):'-';?></td>
 					<td>-</td>
 					<td>-</td>
 					<td>-</td>
