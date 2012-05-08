@@ -1,0 +1,62 @@
+Gala Dinner
+	*Quota: 350 (Main + Additional), 50 (sponsor)
+	*Additional: max 2 pax
+	*Price: RP. 450,000,- (Main + Additional); 
+	*Sponsor -free
+
+Golf Tournament
+	*Quota: 120 (open) + 24 (sponsor)
+	*Price: RP. 2,500,000,-/pax
+	+ VAT ( All ) -> excel import
+
+emails :
+
+excel import -> CC : convention.group@ipaconvex.com
+individual -> CC : convention.individu@ipaconvex.com
+
+
+Convention
+	*Professional Domestic: RP. 4,000,000,-/pax
+	*Professional Overseas: US$ 450.00/pax
+	*Student Domestic	: RP. 300,000,-/pax
+	*Student Overseas	: US$ 90.00/pax
+
+Group: all includes VAT 10%
+
+Individual: all exclude VAT
+
+Free of Charge: exhibitor entitlement + VIP
+
+Group: record NPWP company
+
+*Short Course: disable
+
+Convention 
+	*PD, PO, SD, SO
+
+	*Booth Assistant 150, 
+	*Booth Assistant 30, 
+	-> penjumlahan terpisah + VAT 10%
+	-> FOC
+
+
+*Non-convention
+	*Committee, 
+	*Media, 
+	*Organizer, 
+	*Security, 
+	*Contractor, 
+	*Worker, 
+	*EC Participant, 
+	*Student Volunteer,
+
+//tambahan Reza
+	*Technical Assistant Pre-Event,
+    *On-Site Technical Support
+
+Meals
+	Participant, FOC, Booth Assistant 150; 1x/day for 3days
+
+*Please change QR code to 128 bar-code type or any simpler type
+
+Attached samples of Notification Letter

@@ -1,0 +1,272 @@
+[27-Jan-2011 12:37:58] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[27-Jan-2011 12:39:50] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[27-Jan-2011 12:39:54] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[27-Jan-2011 12:40:02] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[27-Jan-2011 12:41:26] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[27-Jan-2011 12:41:39] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[28-Jan-2011 09:15:23] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[28-Jan-2011 09:15:57] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[28-Jan-2011 09:18:42] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[28-Jan-2011 15:35:34] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[28-Jan-2011 15:37:30] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[28-Jan-2011 23:45:23] PHP Fatal error:  Call to a member function send() on a non-object in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 523
+[31-Jan-2011 00:58:12] PHP Fatal error:  Call to undefined method MY_Auth_form_processing::forgotten_password_form() in /home/ipascbd/public_html/convex/reg/modules/auth/controllers/auth.php on line 57
+[31-Jan-2011 15:04:00] PHP Fatal error:  Call to undefined method MY_Auth_form_processing::_forgotten_password() in /home/ipascbd/public_html/convex/reg/modules/auth/libraries/MY_Auth_form_processing.php on line 434
+[31-Jan-2011 15:04:12] PHP Fatal error:  Call to undefined method MY_Auth_form_processing::_forgotten_password() in /home/ipascbd/public_html/convex/reg/modules/auth/libraries/MY_Auth_form_processing.php on line 434
+[02-Feb-2011 07:50:36] PHP Fatal error:  Call to undefined method MY_Auth_form_processing::_forgotten_password() in /home/ipascbd/public_html/convex/reg/modules/auth/libraries/MY_Auth_form_processing.php on line 434
+[02-Feb-2011 11:29:20] PHP Fatal error:  Call to undefined method MY_Auth_form_processing::_forgotten_password() in /home/ipascbd/public_html/convex/reg/modules/auth/libraries/MY_Auth_form_processing.php on line 434
+[04-Feb-2011 13:16:14] PHP Fatal error:  Call to undefined method MY_Auth_form_processing::_forgotten_password() in /home/ipascbd/public_html/convex/reg/modules/auth/libraries/MY_Auth_form_processing.php on line 434
+[04-Feb-2011 13:17:52] PHP Fatal error:  Call to undefined method MY_Auth_form_processing::_forgotten_password() in /home/ipascbd/public_html/convex/reg/modules/auth/libraries/MY_Auth_form_processing.php on line 434
+[04-Feb-2011 13:27:50] PHP Fatal error:  Call to undefined method MY_Auth_form_processing::_forgotten_password() in /home/ipascbd/public_html/convex/reg/modules/auth/libraries/MY_Auth_form_processing.php on line 434
+[06-Feb-2011 11:48:32] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 297
+[06-Feb-2011 11:48:33] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 815
+[06-Feb-2011 11:50:04] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 247
+[06-Feb-2011 11:50:04] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 247
+[06-Feb-2011 11:50:05] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 671
+[06-Feb-2011 11:50:06] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 1030
+[06-Feb-2011 12:25:36] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 897
+[06-Feb-2011 12:25:36] PHP Parse error:  syntax error, unexpected T_STRING in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 897
+[06-Feb-2011 12:25:37] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 927
+[08-Feb-2011 15:45:52] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 381
+[08-Feb-2011 15:45:52] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 381
+[08-Feb-2011 22:53:44] PHP Fatal error:  Call to undefined method User_model::getUsersComplete() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 158
+[11-Feb-2011 23:40:15] PHP Parse error:  syntax error, unexpected '<' in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 1106
+[14-Feb-2011 14:40:57] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 409
+[04-Apr-2011 12:38:00] PHP Fatal error:  Call to undefined method User_model::getUserBooths() in /home/ipascbd/public_html/convex/reg/modules/media/controllers/admin/boothbuyer.php on line 150
+[06-Apr-2011 15:35:24] PHP Fatal error:  Call to undefined method User_model::getUserByCompany() in /home/ipascbd/public_html/convex/reg/modules/company/controllers/admin/convention.php on line 152
+[06-Apr-2011 15:37:29] PHP Fatal error:  Call to a member function result_array() on a non-object in /home/ipascbd/public_html/convex/reg/modules/company/controllers/admin/convention.php on line 350
+[06-Apr-2011 15:57:51] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/ipascbd/public_html/convex/reg/modules/dashboard/libraries/Ipa_stat_widget.php on line 181
+[07-Apr-2011 01:27:45] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/ipascbd/public_html/convex/reg/modules/company/views/admin/user_overlay.php on line 17
+[07-Apr-2011 16:44:03] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/company/views/admin/convention_list.php on line 58
+[19-Apr-2011 18:16:50] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:16:50] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:16:50] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:16:50] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:17] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:28] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:28] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:40] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:56] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:56] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:56] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:56] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:56] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:56] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[19-Apr-2011 18:17:56] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 12:55:40] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[20-Apr-2011 12:55:47] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[20-Apr-2011 14:19:32] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:19:32] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:19:32] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:19:32] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:19:57] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:08] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:08] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:19] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:35] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:35] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:35] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:35] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:35] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:35] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 14:20:35] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:27:20] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:27:21] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:27:21] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:27:21] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:05] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:23] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:23] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:40] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:40] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:40] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:40] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:40] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:40] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:40] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[20-Apr-2011 15:28:40] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[03-May-2011 08:36:34] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[05-May-2011 00:59:12] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:00:34] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:00:35] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:01:26] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:01:27] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:01:29] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:03:39] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:03:41] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:03:42] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:03:44] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:03:48] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:06:50] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:06:51] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:06:52] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:06:54] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:07:04] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:09:06] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:09:31] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/media/controllers/admin/media.php on line 726
+[05-May-2011 01:15:10] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/media/controllers/admin/media.php on line 726
+[05-May-2011 01:16:38] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/media/controllers/admin/media.php on line 726
+[05-May-2011 01:16:52] PHP Fatal error:  Call to undefined function qrmake() in /home/ipascbd/public_html/convex/reg/modules/media/controllers/admin/media.php on line 726
+[05-May-2011 01:21:51] PHP Fatal error:  Call to undefined function qrdata() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:23:37] PHP Fatal error:  Call to undefined function qrdata() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:23:38] PHP Fatal error:  Call to undefined function qrdata() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:23:38] PHP Fatal error:  Call to undefined function qrdata() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:24:55] PHP Fatal error:  Call to undefined function qrdata() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[05-May-2011 01:24:56] PHP Fatal error:  Call to undefined function qrdata() in /home/ipascbd/public_html/convex/reg/modules/user/controllers/user.php on line 126
+[06-May-2011 13:19:28] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68
+[11-May-2011 14:21:09] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 14:53:56] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 14:58:39] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:10:49] PHP Warning:  Unterminated comment starting line 98 in /home/ipascbd/public_html/convex/reg/system/application/libraries/Matchbox.php on line 98
+[11-May-2011 15:10:49] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/ipascbd/public_html/convex/reg/system/application/libraries/Matchbox.php on line 98
+[11-May-2011 15:11:42] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:33:12] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:33:44] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:34:59] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:35:17] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:38:05] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:39:20] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:41:36] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:41:37] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:41:48] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:59:36] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 15:59:47] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[11-May-2011 16:01:56] PHP Fatal error:  Call to undefined function ImageCreate() in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 628
+[12-May-2011 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/media/controllers/admin/media.php on line 883
+[12-May-2011 15:58:11] PHP Warning:  Unterminated comment starting line 234 in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 234
+[12-May-2011 15:58:11] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 234
+[12-May-2011 15:58:11] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/register/controllers/register.php on line 1010
+[15-May-2011 15:48:21] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/auth/models/user_model.php on line 152
+[15-May-2011 15:48:21] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/auth/models/user_model.php on line 362
+[15-May-2011 15:48:22] PHP Parse error:  syntax error, unexpected $end in /home/ipascbd/public_html/convex/reg/modules/auth/models/user_model.php on line 568
+[15-May-2011 21:36:49] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/ipascbd/public_html/convex/reg/modules/register/controllers/checker.php on line 62
+[16-May-2011 17:39:13] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ipascbd/public_html/convex/reg/system/application/helpers/qr_img_helper.php on line 644
+[16-May-2011 18:38:54] PHP Fatal error:  Uncaught exception 'DOMPDF_Exception' with message 'No block-level parent found.  Not good.' in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php:68
+Stack trace:
+#0 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(382): Inline_Positioner->position()
+#1 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_frame_reflower.cls.php(56): Frame_Decorator->position()
+#2 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Inline_Frame_Reflower->reflow()
+#3 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/page_frame_reflower.cls.php(96): Frame_Decorator->reflow()
+#4 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/frame_decorator.cls.php(388): Page_Frame_Reflower->reflow()
+#5 /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/dompdf.cls.php(525): Frame_Decorator->reflow()
+#6 /home/ipascbd/public_html/convex/reg/system/p in /home/ipascbd/public_html/convex/reg/system/plugins/dompdf/include/inline_positioner.cls.php on line 68

@@ -1,0 +1,1 @@
+<iframe width="800" height="600" src="<?=site_url('/media/admin/media/snappic/'.$id.'/'.time());?>" />

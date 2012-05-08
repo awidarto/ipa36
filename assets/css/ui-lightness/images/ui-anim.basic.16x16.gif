@@ -1,0 +1,1088 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var logged_in_user_email = null;
+ 
+ 
+ var relative_base_url = "";
+ 
+ </script>
+ 
+ 
+ <title>ui-anim.basic.16x16.gif - 
+ wiquery -
+ 
+ Project Hosting on Google Code</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/3799605220899551948/css/ph_core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/3799605220899551948/css/ph_detail.css" >
+ 
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/3799605220899551948/css/d_sb_20080522.css" >
+ 
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/3799605220899551948/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ 
+  tr.inline_comment {
+ background: #fff;
+ vertical-align: top;
+ }
+ div.draft, div.published {
+ padding: .3em;
+ border: 1px solid #999; 
+ margin-bottom: .1em;
+ font-family: arial, sans-serif;
+ max-width: 60em;
+ }
+ div.draft {
+ background: #ffa;
+ } 
+ div.published {
+ background: #e5ecf9;
+ }
+ div.published .body, div.draft .body {
+ padding: .5em .1em .1em .1em;
+ max-width: 60em;
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word;
+ font-size: 1em;
+ }
+ div.draft .actions {
+ margin-left: 1em;
+ font-size: 90%;
+ }
+ div.draft form {
+ padding: .5em .5em .5em 0;
+ }
+ div.draft textarea, div.published textarea {
+ width: 95%;
+ height: 10em;
+ font-family: arial, sans-serif;
+ margin-bottom: .5em;
+ }
+
+ 
+ .nocursor, .nocursor td, .cursor_hidden, .cursor_hidden td {
+ background-color: white;
+ height: 2px;
+ }
+ .cursor, .cursor td {
+ background-color: darkblue;
+ height: 2px;
+ display: '';
+ }
+ 
+ 
+ .edit_icon {
+ width: 14px;
+ height: 14px;
+ padding-right: 4px;
+ }
+ 
+.list {
+ border: 1px solid white;
+ margin-bottom:0;
+}
+
+ </style>
+</head>
+<body class="t4">
+ <script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-4935108-4'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ </script>
+<div class="headbg">
+ <div id="gaia">
+ 
+ <span>
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=http%3A%2F%2Fcode.google.com%2Fp%2Fwiquery%2Fsource%2Fbrowse%2Fbranches%2Fwiquery-1.1-experiment%2Fsrc%2Fmain%2Fresources%2Forg%2Fodlabs%2Fwiquery%2Fui%2Fthemes%2Fbase%2Fimages%2Fui-anim.basic.16x16.gif%3Fr%3D288&amp;followup=http%3A%2F%2Fcode.google.com%2Fp%2Fwiquery%2Fsource%2Fbrowse%2Fbranches%2Fwiquery-1.1-experiment%2Fsrc%2Fmain%2Fresources%2Forg%2Fodlabs%2Fwiquery%2Fui%2Fthemes%2Fbase%2Fimages%2Fui-anim.basic.16x16.gif%3Fr%3D288" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+ <div style="font-weight:bold; color:#a03; padding:5px; margin-top:10px; text-align:center; background:#ffeac0;">
+ Project Hosting will be READ-ONLY <a href='http://www.timeanddate.com/worldclock/fixedtime.html?month=1&day=26&year=2011&hour=7&min=30&sec=0&p1=137'>Wednesday at 7:30am PST</a> due to brief  maintenance.
+ 
+ </div>
+
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0">
+ <tr style="height: 58px;">
+ 
+ <td id="plogo">
+ <a href="/p/wiquery/">
+ 
+ <img src="http://www.gstatic.com/codesite/ph/images/defaultlogo.png" alt="Logo">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="/p/wiquery/">wiquery</a>
+ </div>
+ <div id="psum">
+ <a id="project_summary_link" href="/p/wiquery/" >Wicket integration with jQuery and jQuery UI</a>
+ 
+ </div>
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="/p/wiquery/" class="tab ">Project&nbsp;Home</a> 
+ 
+ 
+ 
+ 
+ <a href="/p/wiquery/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/wiquery/wiki/DocumentationHome?tm=6" class="tab ">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/wiquery/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/wiquery/source/checkout"
+ class="tab active">Source</a>
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td class="subt">
+ <div class="st2">
+ <div class="isf">
+ 
+ 
+ 
+ <span class="inst1"><a href="/p/wiquery/source/checkout">Checkout</a></span> &nbsp;
+ <span class="inst2"><a href="/p/wiquery/source/browse/">Browse</a></span> &nbsp;
+ <span class="inst3"><a href="/p/wiquery/source/list">Changes</a></span> &nbsp;
+ 
+ <form action="http://www.google.com/codesearch" method="get" style="display:inline"
+ onsubmit="document.getElementById('codesearchq').value = document.getElementById('origq').value + ' package:http://wiquery\\.googlecode\\.com'">
+ <input type="hidden" name="q" id="codesearchq" value="">
+ <input type="text" maxlength="2048" size="38" id="origq" name="origq" value="" title="Google Code Search" style="font-size:92%">&nbsp;<input type="submit" value="Search Trunk" name="btnG" style="font-size:92%">
+ 
+ 
+ 
+ </form>
+ </div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+
+
+<div id="maincol"
+ 
+>
+
+ 
+<!-- IE -->
+
+
+
+
+<div class="expand">
+<div id="colcontrol">
+<style type="text/css">
+ #file_flipper { white-space: nowrap; padding-right: 2em; }
+ #file_flipper.hidden { display: none; }
+ #file_flipper .pagelink { color: #0000CC; text-decoration: underline; }
+ #file_flipper #visiblefiles { padding-left: 0.5em; padding-right: 0.5em; }
+</style>
+<table id="nav_and_rev" class="list"
+ cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+ 
+ <td nowrap="nowrap" class="src_crumbs src_nav" width="33%">
+ <strong class="src_nav">Source path:&nbsp;</strong>
+ <span id="crumb_root">
+ 
+ <a href="/p/wiquery/source/browse/?r=288">svn</a>/&nbsp;</span>
+ <span id="crumb_links" class="ifClosed"><a href="/p/wiquery/source/browse/branches/?r=288">branches</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/?r=288">wiquery-1.1-experiment</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/?r=288">src</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/?r=288">main</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/resources/?r=288">resources</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/resources/org/?r=288">org</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/?r=288">odlabs</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/?r=288">wiquery</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/ui/?r=288">ui</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/ui/themes/?r=288">themes</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/ui/themes/base/?r=288">base</a><span class="sp">/&nbsp;</span><a href="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/ui/themes/base/images/?r=288">images</a><span class="sp">/&nbsp;</span>ui-anim.basic.16x16.gif</span>
+ 
+ 
+
+ </td>
+ 
+ 
+ <td nowrap="nowrap" width="33%" align="right">
+ <table cellpadding="0" cellspacing="0" style="font-size: 100%"><tr>
+ 
+ 
+ <td class="flipper"><b>r288</b></td>
+ 
+ </tr></table>
+ </td> 
+ </tr>
+</table>
+
+<div class="fc">
+ 
+ 
+ <p><em>
+ 
+ This file is not plain text (only UTF-8 and Latin-1
+ text encodings are currently supported).
+ 
+ </em></p>
+ 
+ 
+ <div id="log">
+ <div style="text-align:right">
+ <a class="ifCollapse" href="#" onclick="_toggleMeta('', 'p', 'wiquery', this)">Show details</a>
+ <a class="ifExpand" href="#" onclick="_toggleMeta('', 'p', 'wiquery', this)">Hide details</a>
+ </div>
+ <div class="ifExpand">
+ 
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="changelog">
+ <p>Change log</p>
+ <div>
+ <a href="/p/wiquery/source/detail?spec=svn288&r=277">r277</a>
+ by roche.jul
+ on Feb 01, 2010
+ &nbsp; <a href="/p/wiquery/source/diff?spec=svn288&r=277&amp;format=side&amp;path=/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/ui/themes/base/images/ui-anim.basic.16x16.gif&amp;old_path=/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/ui/themes/base/images/ui-anim.basic.16x16.gif&amp;old=">Diff</a>
+ </div>
+ <pre>1.1 XP branch :
+- move to wicket 1.4.6
+- move to jquery ui 1.8 rc1
+- add Button, ButtonAjax and Autocomplete
+
+TODO: debug autocomplete jquery API and
+problemn on dialog button css</pre>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+ var detail_url = '/p/wiquery/source/detail?r=277&spec=svn288';
+ var publish_url = '/p/wiquery/source/detail?r=277&spec=svn288#publish';
+ // describe the paths of this revision in javascript.
+ var changed_paths = [];
+ var changed_urls = [];
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/modification-list.txt');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/modification-list.txt?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/pom.xml');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/pom.xml?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/accordion/Accordion.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/accordion/Accordion.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/accordion/AccordionIcon.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/accordion/AccordionIcon.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/accordion/AccordionJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/accordion/AccordionJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/Autocomplete.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/Autocomplete.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteBehavior.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteBehavior.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteJavascriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteJavascriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteRequestTarget.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteRequestTarget.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteSource.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteSource.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteValue.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteValue.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/Button.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/Button.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/ButtonAjax.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/ButtonAjax.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/ButtonIcon.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/ButtonIcon.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/ButtonJavascriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/ButtonJavascriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/core/CoreUIJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/core/CoreUIJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/datepicker/DatePicker.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/datepicker/DatePicker.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/datepicker/DatePickerJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/datepicker/DatePickerJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/datepicker/DatePickerLanguageResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/datepicker/DatePickerLanguageResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/dialog/Dialog.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/dialog/Dialog.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/dialog/DialogJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/dialog/DialogJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/dialog/util/DialogUtilsBehavior.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/dialog/util/DialogUtilsBehavior.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/draggable/DraggableBehavior.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/draggable/DraggableBehavior.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/draggable/DraggableJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/draggable/DraggableJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/droppable/DroppableBehavior.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/droppable/DroppableBehavior.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/droppable/DroppableJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/droppable/DroppableJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/BlindEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/BlindEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/BounceEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/BounceEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ClipEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ClipEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/CoreEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/CoreEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/DropEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/DropEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ExplodeEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ExplodeEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/FoldEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/FoldEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/HighlightEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/HighlightEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/PulsateEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/PulsateEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ScaleEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ScaleEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ShakeEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ShakeEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/SlideEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/SlideEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/TransferEffectJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/TransferEffectJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/mouse');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/mouse?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/mouse/MouseJavascriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/mouse/MouseJavascriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/position');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/position?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/position/PositionJavascriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/position/PositionJavascriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/progressbar/ProgressBar.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/progressbar/ProgressBar.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/progressbar/ProgressBarJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/progressbar/ProgressBarJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/resizable/ResizableBehavior.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/resizable/ResizableBehavior.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/resizable/ResizableJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/resizable/ResizableJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/selectable/SelectableBehavior.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/selectable/SelectableBehavior.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ changed_paths.push('/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/selectable/SelectableJavaScriptResourceReference.java');
+ changed_urls.push('/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/selectable/SelectableJavaScriptResourceReference.java?r\x3d277\x26spec\x3dsvn288');
+ 
+ 
+ function getCurrentPageIndex() {
+ for (var i = 0; i < changed_paths.length; i++) {
+ if (selected_path == changed_paths[i]) {
+ return i;
+ }
+ }
+ }
+ function getNextPage() {
+ var i = getCurrentPageIndex();
+ if (i < changed_paths.length - 1) {
+ return changed_urls[i + 1];
+ }
+ return null;
+ }
+ function getPreviousPage() {
+ var i = getCurrentPageIndex();
+ if (i > 0) {
+ return changed_urls[i - 1];
+ }
+ return null;
+ }
+ function gotoNextPage() {
+ var page = getNextPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoPreviousPage() {
+ var page = getPreviousPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoDetailPage() {
+ window.location = detail_url;
+ }
+ function gotoPublishPage() {
+ window.location = publish_url;
+ }
+</script>
+
+ 
+ <style type="text/css">
+ #review_nav {
+ border-top: 3px solid white;
+ padding-top: 6px;
+ margin-top: 1em;
+ }
+ #review_nav td {
+ vertical-align: middle;
+ }
+ #review_nav select {
+ margin: .5em 0;
+ }
+ </style>
+ <div id="review_nav">
+ <table><tr><td>Go to:&nbsp;</td><td>
+ <select name="files_in_rev" onchange="window.location=this.value">
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/modification-list.txt?r=277&amp;spec=svn288"
+ 
+ >...experiment/modification-list.txt</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/pom.xml?r=277&amp;spec=svn288"
+ 
+ >...s/wiquery-1.1-experiment/pom.xml</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/accordion/Accordion.java?r=277&amp;spec=svn288"
+ 
+ >...uery/ui/accordion/Accordion.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/accordion/AccordionIcon.java?r=277&amp;spec=svn288"
+ 
+ >.../ui/accordion/AccordionIcon.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/accordion/AccordionJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/Autocomplete.java?r=277&amp;spec=svn288"
+ 
+ >...i/autocomplete/Autocomplete.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteBehavior.java?r=277&amp;spec=svn288"
+ 
+ >...mplete/AutocompleteBehavior.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteJavascriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavascriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteRequestTarget.java?r=277&amp;spec=svn288"
+ 
+ >...e/AutocompleteRequestTarget.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteSource.java?r=277&amp;spec=svn288"
+ 
+ >...complete/AutocompleteSource.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/autocomplete/AutocompleteValue.java?r=277&amp;spec=svn288"
+ 
+ >...ocomplete/AutocompleteValue.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button?r=277&amp;spec=svn288"
+ 
+ >...ava/org/odlabs/wiquery/ui/button</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/Button.java?r=277&amp;spec=svn288"
+ 
+ >...bs/wiquery/ui/button/Button.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/ButtonAjax.java?r=277&amp;spec=svn288"
+ 
+ >...iquery/ui/button/ButtonAjax.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/ButtonIcon.java?r=277&amp;spec=svn288"
+ 
+ >...iquery/ui/button/ButtonIcon.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/button/ButtonJavascriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavascriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/core/CoreUIJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/datepicker/DatePicker.java?r=277&amp;spec=svn288"
+ 
+ >...ry/ui/datepicker/DatePicker.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/datepicker/DatePickerJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/datepicker/DatePickerLanguageResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...erLanguageResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/dialog/Dialog.java?r=277&amp;spec=svn288"
+ 
+ >...bs/wiquery/ui/dialog/Dialog.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/dialog/DialogJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/dialog/util/DialogUtilsBehavior.java?r=277&amp;spec=svn288"
+ 
+ >...og/util/DialogUtilsBehavior.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/draggable/DraggableBehavior.java?r=277&amp;spec=svn288"
+ 
+ >...draggable/DraggableBehavior.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/draggable/DraggableJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/droppable/DroppableBehavior.java?r=277&amp;spec=svn288"
+ 
+ >...droppable/DroppableBehavior.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/droppable/DroppableJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/BlindEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/BounceEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ClipEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/CoreEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/DropEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ExplodeEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/FoldEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/HighlightEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/PulsateEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ScaleEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/ShakeEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/SlideEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/effects/TransferEffectJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/mouse?r=277&amp;spec=svn288"
+ 
+ >...java/org/odlabs/wiquery/ui/mouse</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/mouse/MouseJavascriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavascriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/position?r=277&amp;spec=svn288"
+ 
+ >...a/org/odlabs/wiquery/ui/position</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/position/PositionJavascriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavascriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/progressbar/ProgressBar.java?r=277&amp;spec=svn288"
+ 
+ >.../ui/progressbar/ProgressBar.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/progressbar/ProgressBarJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/resizable/ResizableBehavior.java?r=277&amp;spec=svn288"
+ 
+ >...resizable/ResizableBehavior.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/resizable/ResizableJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/selectable/SelectableBehavior.java?r=277&amp;spec=svn288"
+ 
+ >...lectable/SelectableBehavior.java</option>
+ 
+ <option value="/p/wiquery/source/browse/branches/wiquery-1.1-experiment/src/main/java/org/odlabs/wiquery/ui/selectable/SelectableJavaScriptResourceReference.java?r=277&amp;spec=svn288"
+ 
+ >...JavaScriptResourceReference.java</option>
+ 
+ </select>
+ </td></tr></table>
+ 
+ 
+ 
+
+
+
+ <div style="white-space:nowrap">
+ Project members,
+ <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=http%3A%2F%2Fcode.google.com%2Fp%2Fwiquery%2Fsource%2Fbrowse%2Fbranches%2Fwiquery-1.1-experiment%2Fsrc%2Fmain%2Fresources%2Forg%2Fodlabs%2Fwiquery%2Fui%2Fthemes%2Fbase%2Fimages%2Fui-anim.basic.16x16.gif%3Fr%3D288&amp;followup=http%3A%2F%2Fcode.google.com%2Fp%2Fwiquery%2Fsource%2Fbrowse%2Fbranches%2Fwiquery-1.1-experiment%2Fsrc%2Fmain%2Fresources%2Forg%2Fodlabs%2Fwiquery%2Fui%2Fthemes%2Fbase%2Fimages%2Fui-anim.basic.16x16.gif%3Fr%3D288"
+ >sign in</a> to write a code review</div>
+
+
+ 
+ </div>
+ 
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="older_bubble">
+ <p>Older revisions</p>
+ 
+ <a href="/p/wiquery/source/list?path=/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/ui/themes/base/images/ui-anim.basic.16x16.gif&start=277">All revisions of this file</a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="fileinfo_bubble">
+ <p>File info</p>
+ 
+ <div>Size: 1553 bytes</div>
+ 
+ <div><a href="http://wiquery.googlecode.com/svn-history/r288/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/ui/themes/base/images/ui-anim.basic.16x16.gif">View raw file</a></div>
+ </div>
+ 
+ <div id="props">
+ <p>File properties</p>
+ <dl>
+ 
+ <dt>svn:mime-type</dt>
+ <dd>application/octet-stream</dd>
+ 
+ </dl>
+ </div>
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ </div>
+
+
+</div>
+
+</div>
+</div>
+
+
+<script src="http://www.gstatic.com/codesite/ph/3799605220899551948/js/source_file_scripts.js"></script>
+
+ <script type="text/javascript" src="http://kibbles.googlecode.com/files/kibbles-1.3.3.comp.js"></script>
+ <script type="text/javascript">
+ var lastStop = null;
+ var initilized = false;
+ 
+ function updateCursor(next, prev) {
+ if (prev && prev.element) {
+ prev.element.className = 'cursor_stop cursor_hidden';
+ }
+ if (next && next.element) {
+ next.element.className = 'cursor_stop cursor';
+ lastStop = next.index;
+ }
+ }
+ 
+ function pubRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftDestroyed(data) {
+ updateCursorForCell(data.cellId, 'nocursor');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ function reloadCursors() {
+ kibbles.skipper.reset();
+ loadCursors();
+ if (lastStop != null) {
+ kibbles.skipper.setCurrentStop(lastStop);
+ }
+ }
+ // possibly the simplest way to insert any newly added comments
+ // is to update the class of the corresponding cursor row,
+ // then refresh the entire list of rows.
+ function updateCursorForCell(cellId, className) {
+ var cell = document.getElementById(cellId);
+ // we have to go two rows back to find the cursor location
+ var row = getPreviousElement(cell.parentNode);
+ row.className = className;
+ }
+ // returns the previous element, ignores text nodes.
+ function getPreviousElement(e) {
+ var element = e.previousSibling;
+ if (element.nodeType == 3) {
+ element = element.previousSibling;
+ }
+ if (element && element.tagName) {
+ return element;
+ }
+ }
+ function loadCursors() {
+ // register our elements with skipper
+ var elements = CR_getElements('*', 'cursor_stop');
+ var len = elements.length;
+ for (var i = 0; i < len; i++) {
+ var element = elements[i]; 
+ element.className = 'cursor_stop cursor_hidden';
+ kibbles.skipper.append(element);
+ }
+ }
+ function toggleComments() {
+ CR_toggleCommentDisplay();
+ reloadCursors();
+ }
+ function keysOnLoadHandler() {
+ // setup skipper
+ kibbles.skipper.addStopListener(
+ kibbles.skipper.LISTENER_TYPE.PRE, updateCursor);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_top', 50);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_bottom', 100);
+ // Register our keys
+ kibbles.skipper.addFwdKey("n");
+ kibbles.skipper.addRevKey("p");
+ kibbles.keys.addKeyPressListener(
+ 'u', function() { window.location = detail_url; });
+ kibbles.keys.addKeyPressListener(
+ 'r', function() { window.location = detail_url + '#publish'; });
+ 
+ kibbles.keys.addKeyPressListener('j', gotoNextPage);
+ kibbles.keys.addKeyPressListener('k', gotoPreviousPage);
+ 
+ 
+ }
+ </script>
+<script src="http://www.gstatic.com/codesite/ph/3799605220899551948/js/code_review_scripts.js"></script>
+<script type="text/javascript">
+ 
+ // the comment form template
+ var form = '<div class="draft"><div class="header"><span class="title">Draft comment:</span></div>' +
+ '<div class="body"><form onsubmit="return false;"><textarea id="$ID">$BODY</textarea><br>$ACTIONS</form></div>' +
+ '</div>';
+ // the comment "plate" template used for both draft and published comment "plates".
+ var draft_comment = '<div class="draft" ondblclick="$ONDBLCLICK">' +
+ '<div class="header"><span class="title">Draft comment:</span><span class="actions">$ACTIONS</span></div>' +
+ '<pre id="$ID" class="body">$BODY</pre>' +
+ '</div>';
+ var published_comment = '<div class="published">' +
+ '<div class="header"><span class="title"><a href="$PROFILE_URL">$AUTHOR:</a></span><div>' +
+ '<pre id="$ID" class="body">$BODY</pre>' +
+ '</div>';
+
+ function showPublishInstructions() {
+ var element = document.getElementById('review_instr');
+ if (element) {
+ element.className = 'opened';
+ }
+ }
+ function revsOnLoadHandler() {
+ // register our source container with the commenting code
+ var paths = {'svn288': '/branches/wiquery-1.1-experiment/src/main/resources/org/odlabs/wiquery/ui/themes/base/images/ui-anim.basic.16x16.gif'}
+ CR_setup('', 'p', 'wiquery', '', 'svn288', paths,
+ '', CR_BrowseIntegrationFactory);
+ // register our hidden ui elements with the code commenting code ui builder.
+ CR_registerLayoutElement('form', form);
+ CR_registerLayoutElement('draft_comment', draft_comment);
+ CR_registerLayoutElement('published_comment', published_comment);
+ 
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_DRAFT_PLATE, showPublishInstructions);
+ 
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_PUB_PLATE, pubRevealed);
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_DRAFT_PLATE, draftRevealed);
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.DISCARD_DRAFT_COMMENT, draftDestroyed);
+ 
+ 
+ var initilized = true;
+ reloadCursors();
+ }
+ window.onload = function() {keysOnLoadHandler(); revsOnLoadHandler();};
+
+</script>
+<script type="text/javascript" src="http://www.gstatic.com/codesite/ph/3799605220899551948/js/dit_scripts.js"></script>
+
+ 
+ 
+ <script type="text/javascript" src="http://www.gstatic.com/codesite/ph/3799605220899551948/js/core_scripts_20081103.js"></script>
+ <script type="text/javascript" src="/js/codesite_product_dictionary_ph.pack.04102009.js"></script>
+ </div>
+<div id="footer" dir="ltr">
+ 
+ <div class="text">
+ 
+ &copy;2010 Google -
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ 
+ </div>
+</div>
+
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+ 
+ 
+
+
+ 
+ </body>
+</html>
+

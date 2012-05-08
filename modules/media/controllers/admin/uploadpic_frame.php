@@ -1,0 +1,1 @@
+<iframe width="400" height="300" src="<?=site_url('/media/admin/media/uploadpic/'.$id.'/'.time());?>" />

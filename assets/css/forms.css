@@ -1,0 +1,104 @@
+/* -------------------------------------------------------------- 
+   
+   forms.css
+   * Allows the creation of vertical and horizontal forms
+   * Allows sets up basic input element styles
+   
+-------------------------------------------------------------- */
+
+/* Basic form styles */       
+form ol { margin: 0px; padding: 0px; list-style-type: none; }  
+form li { display: block; padding: 0.2em; }       
+form label { display: block; font-weight: bold; } 
+form em { color: red; background-color: #fff; }   
+       
+/* Input elements */
+form input.text, form textarea { width: 40em; }
+form select { width: 15em; }
+form input.file { width: 20em; }
+
+/* Special readonly style */
+form .readonly { background-color: #E0DFE3; color: #99968A; }
+
+/* Form rows */
+form.horizontal li label { display: -moz-inline-box; width: 15em; vertical-align: top; }  
+* form.horizontal li label { display: inline-block;  }
+
+/* Checkbox row */
+/*
+form.vertical li.checkbox span { display: inline; }
+form.horizontal li.checkbox label { display: inline; width: 90%; }
+form.horizontal li.checkbox span { display: inline; }
+*/
+
+/* Submit Button Area */
+form.vertical li.submit { text-align: center; }  
+form.horizontal li.submit { margin-left: 15em; } 
+
+ol.form_nav li.current_form {
+    font-weight:bold;
+    background-color:maroon;
+    color:white;
+}
+
+ol.form_nav {
+    margin: 10px 0px;
+}
+
+ol.form_nav li{
+    float:left;
+    padding:10px 15px;
+    background-color:orange;
+    display:block;
+}
+
+.note {
+    background-color:black;
+    color:white;
+    padding:5px;
+    margin:5px 0px;
+    font-weight:bold;
+}
+
+ol.shortcourse li{
+    padding-bottom:10px;
+}
+
+ul#floorplan {
+    margin-left:200px;
+    
+}
+
+ul#floorplan li {
+    float:left;
+}
+
+ul#floorplan li a {
+    display:block;
+    margin:3px;
+    padding:3px;
+}
+
+ul#floorplan li a img {
+    border:thin solid #ddd ;
+}
+
+.ui-autocomplete-loading { background: white url('ui-lightness/images/ui-anim_basic_16x16.gif') right center no-repeat; }
+
+.cancel_button {
+    cursor:pointer;
+    padding:3px 5px;
+    background-color:maroon;
+    color:white;
+}
+
+.sold_button {
+    padding:3px 5px;
+    background-color:orange;
+    color:white;
+}
+
+ol#reservation li{
+    line-height:2em;
+    border-bottom:thin solid #eee;
+}

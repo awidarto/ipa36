@@ -1,0 +1,5 @@
+system/application/config/config.php
+system/application/config/qr.php
+system/application/config/syscon.php
+public/*
+
