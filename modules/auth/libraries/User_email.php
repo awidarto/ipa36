@@ -77,7 +77,10 @@ class User_email
 		$message = $this->CI->parser->parse($view, $data, TRUE);
 
 		if(isset($data['import_id'])){
+			$import_id = $data['import_id'];
 			file_put_contents($this->CI->config->item('public_folder').'outbox/'.$data['import_id'].'-group.html', $message);
+		}else{
+			$data['import_id'] = 0;
 		}
 
 		// Setup Email settings
@@ -91,6 +94,7 @@ class User_email
         $outbox = array();
         $outbox['sendfrom'] = $this->CI->preference->item('automated_from_email');
         $outbox['sendto'] = $email;
+        $outbox['import_id'] = $import_id;
 
         if(is_null($cc)){
     		$this->CI->email->cc($this->CI->preference->item('automated_from_email'));
@@ -131,6 +135,7 @@ class User_email
 		}
 
         $outbox['sendstatus'] = 'OK';
+
 		$this->CI->eventlog->outbox($outbox);
 		$this->CI->eventlog->logEvent('OK->'.$event,$message);
 		return TRUE;

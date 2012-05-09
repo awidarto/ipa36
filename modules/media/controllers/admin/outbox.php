@@ -147,6 +147,8 @@
             
 
             //get total number of result
+            //print $this->where;
+            
             $fields = '*';
             $query = $this->docs->getOutbox($fields, null, $this->where,$order=array('field'=>$orderby,'sort'=>$sort));
             //$query = $this->docs->getUser($this->where, null,$this->where,array('field'=>$orderby,'dir'=>$sort));
@@ -236,13 +238,14 @@
             //$fields = 'id,datecreated,filename,mediatype,duration,seconds,ownerid,ownername,thumbnail,title';            
             //$query = $this->docs->fetch('Documents', $fields , $limit , $this->where,array('field'=>$orderby,'dir'=>$sort));            
 
-            $fields = 'id,timesent,sendfrom,sendto,cc,subject,message,sendstatus';  
+            $fields = 'id,timesent,import_id,sendfrom,sendto,cc,subject,message,sendstatus';  
             $query = $this->docs->getOutbox($fields, $limit, $this->where,$order=array('field'=>$orderby,'sort'=>$sort));
             //$query = $this->usermodel->getUsers($this->where, $limit,array('fields'=>$orderby,'order'=>$sort));   
             $page_query = $this->db->last_query();     
             
             /* main result */
             $data['documents'] = $query->result();
+
 
             $data['controller'] = $this->controller;
             

@@ -16,6 +16,13 @@ $(document).ready(function() {
 
     $("#summary_box").show();
     $("#summary_toggle").html("Hide Summary");
+
+    $("a.mailview").fancybox({ 
+        'hideOnContentClick': false,
+        'showCloseButton': true,
+        'frameWidth' : 800,
+        'frameHeight' : 500,
+    });     
     
 	//swfobject.registerObject("player","9.0.98","expressInstall.swf");
 }); 
@@ -52,6 +59,8 @@ function toggleSummary(){
         $("#summary_toggle").html("Show Summary");
     }
 }
+
+
 
 </script>
 
@@ -188,6 +197,7 @@ thead th {
         <tr>
             <th class="middle top" >ID</th>
             <th class="sidepad">Timestamp</th>
+            <th class="sidepad">Import ID</th>
             <th class="sidepad">From</th>
             <th class="sidepad">To</th>
             <th class="sidepad">CC</th>
@@ -217,11 +227,12 @@ thead th {
         <tr class="left_align">
             <td class="middle top"  style="padding: 5px 2px;"><?=$row->id;?></td>
             <td class="middle top"  style="padding: 5px 2px;"><?=date('d-m-Y',human_to_unix($row->timesent));?></td>
+            <td class="middle top"  style="padding: 5px 2px;"><?=$row->import_id;?></td>
             <td class="middle top"  style="padding: 5px 2px;"><?=$row->sendfrom;?></td>
             <td class="middle top"  style="padding: 5px 2px;"><?=$row->sendto;?></td>
             <td class="middle top"  style="padding: 5px 2px;"><?=$row->cc;?></td>
             <td class="top" style="padding:5px;">
-                <b><?=$row->subject?></b>
+                <a class="mailview" href="<?php print base_url().'public/outbox/'.$row->import_id.'-group.html'; ?>"><b><?=$row->subject?></b></a>
             </td>
             <td class="center middle orange" style="padding:5px;border-right:thin solid grey;">
                 <?php print ($row->sendstatus == 'OK')?$this->bep_assets->icon('tick'):$this->bep_assets->icon('cross');?>

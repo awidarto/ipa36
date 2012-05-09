@@ -65,14 +65,14 @@ class Eventlogmodel extends Model
 	{	
 		($fields != null) ? $this->db->select($fields,false) :'*';
 
-		($where != null) ? $this->db->where($where) :'';
+		($where != null) ? $this->db->where($where,null,false) :'';
 
 		($limit != null ? $this->db->limit($limit['limit'], $limit['offset']) : '');
 
 		($order != null) ? $this->db->order_by($order['field'],$order['sort']) :'';
 
 		//returns the query string
-		return $this->db->get($this->_TABLES['Outbox']);
+		return $this->db->get($this->_TABLES['Outbox'],false);
 	}
 
 	// ------------------------------------------------------------------------
