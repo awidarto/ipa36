@@ -76,6 +76,10 @@ class User_email
 		$subject = "[".$this->CI->preference->item('site_name')."] " . $subject;
 		$message = $this->CI->parser->parse($view, $data, TRUE);
 
+		if(isset($data['import_id'])){
+			file_put_contents($this->CI->config->item('public_folder').'outbox/'.$data['import_id'].'-group.html', $message);
+		}
+
 		// Setup Email settings
 		$this->_initialize_email();
 

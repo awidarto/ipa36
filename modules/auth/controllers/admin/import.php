@@ -397,7 +397,7 @@ class Import extends Admin_Controller
                 }
                 $user['registrationtype'] = 'Booth Assistant';
                 $fee = ($data['user_profiles']['foc'] == 1 )?0:$user['registertype'];
-                $total_idr = $fee;//ipa36 if BA then all other fees omitted
+                $total_usd = $fee;//ipa36 if BA then all other fees omitted
 
                 $user['golf'] = 'No';
                 $user['galadinner'] = 'No';
@@ -612,6 +612,7 @@ class Import extends Admin_Controller
             }
 
             $data['action'] = $user['action'];
+            $data['import_id'] = $import_id;
             $data['users']['password'] = $user['password'];
             
             $summarydata[] = $data;
@@ -681,7 +682,7 @@ class Import extends Admin_Controller
             // send to individual
         }
         
-        $this->_sendtopic($picemail,$picname,$picmobile,$company,$companyphone,$companynpwp,$companyaddress,$summarydata,$sendpass,$forceupdate);
+        $this->_sendtopic($picemail,$picname,$picmobile,$company,$companyphone,$companynpwp,$companyaddress,$summarydata,$sendpass,$forceupdate,$importasgroup,$import_id);
         
 		$data['inserts_count'] = $inserts;
 		$data['updates_count'] = $updates;
@@ -1059,7 +1060,7 @@ class Import extends Admin_Controller
 	    $this->user_email->send($data['users']['email'],$this->lang->line('userlib_email_register'),'public/email_register_nopass',$edata);
 	}
 
-    function _sendtopic($picemail,$picname,$picmobile,$company,$companyphone,$companynpwp,$companyaddress,$summarydata,$sendpass,$forceupdate){
+    function _sendtopic($picemail,$picname,$picmobile,$company,$companyphone,$companynpwp,$companyaddress,$summarydata,$sendpass,$forceupdate,$importasgroup,$import_id){
         //print $address;
 
         //print_r($summarydata);
@@ -1070,6 +1071,7 @@ class Import extends Admin_Controller
         $useraccessinfo_new = "";
         $useraccessinfo_upd = "";
         $useraccessinfo_upd_pass = "";
+
         
         
         for($i = 0;$i < count($summarydata);$i++){
@@ -1090,7 +1092,6 @@ class Import extends Admin_Controller
         //print_r($recapdata);
 
         $summary_detail = $this->parser->parse('email/ipa36_recap_detail',array('recapdata'=>$recapdata),true);
-
         
         $recap = '';
         
@@ -1149,6 +1150,7 @@ class Import extends Admin_Controller
         $total_usd = 0;
         
         foreach($recapdata as $user){
+
             if($user['action'] == 'insert'){
                 $useraccessinfo_new .= $seq_new.". ".$user['firstname']." ".$user['lastname'].", Reg. Number: ".$user['conv_id'].", Reg. Type: ".$user['registrationtype']."\r\n";
                 $useraccessinfo_new .= "\tUsername: ".$user['username'].", Password: ".$user['password']."\r\n\r\n";
@@ -1198,11 +1200,11 @@ class Import extends Admin_Controller
                 $so_amt += ($user['registrationtype'] == 'Student Overseas')?$user['registertype']:0;
                 $ba_amt += ($user['registrationtype'] == 'Booth Assistant')?$user['registertype']:0;
                 
-                if($user['registrationtype'] == 'Professional Domestic' || $user['registrationtype'] == 'Student Domestic' || $user['registrationtype'] == 'Booth Assistant'){
+                if($user['registrationtype'] == 'Professional Domestic' || $user['registrationtype'] == 'Student Domestic'){
                     $total_idr += $user['registertype'];
                 }         
 
-                if($user['registrationtype'] == 'Professional Overseas' || $user['registrationtype'] == 'Student Overseas'){
+                if($user['registrationtype'] == 'Professional Overseas' || $user['registrationtype'] == 'Student Overseas' || $user['registrationtype'] == 'Booth Assistant'){
                     $total_usd += $user['registertype'];
                 }
             }
@@ -1240,8 +1242,13 @@ class Import extends Admin_Controller
 
         }
 
-        $vat_usd = $total_usd * 0.1;
-        $vat_idr = $total_idr * 0.1;
+        if($importasgroup){
+            $vat_usd = $total_usd * 0.1;
+            $vat_idr = $total_idr * 0.1;            
+        }else{
+            $vat_usd = 0;
+            $vat_idr = 0;
+        }
 
         $grand_total_usd = $vat_usd + $total_usd;
         $grand_total_idr = $vat_idr + $total_idr;
@@ -1289,6 +1296,8 @@ class Import extends Admin_Controller
                 'picname'=>$picname,
                 'picmobile'=>$picmobile,
 
+                'importasgroup'=>$importasgroup,
+
                 'useraccessinfo'=>$useraccessinfo,
                 'convention_cnt'=>$convention_cnt,
                 'convention_amt_usd'=>number_format($convention_amt_usd),
@@ -1315,7 +1324,7 @@ class Import extends Admin_Controller
                 'total_po'=>($po_amt == 0)?'-':'USD<span style="float:right">'.number_format($po_amt,2,',','.').'</span>',
                 'total_sd'=>($sd_amt == 0)?'-':'IDR<span style="float:right">'.number_format($sd_amt,2,',','.').'</span>',
                 'total_so'=>($so_amt == 0)?'-':'USD<span style="float:right">'.number_format($so_amt,2,',','.').'</span>',
-                'total_ba'=>($ba_amt == 0)?'-':'IDR<span style="float:right">'.number_format($ba_amt,2,',','.').'</span>',
+                'total_ba'=>($ba_amt == 0)?'-':'USD<span style="float:right">'.number_format($ba_amt,2,',','.').'</span>',
 
                 'chargeable_cnt'=>($convention_cnt - $exhibitor_foc),
                 
@@ -1336,7 +1345,8 @@ class Import extends Admin_Controller
                 'grand_idr' => number_format($grand_total_idr,2,',','.'),
                 
                 'site_name'=>$this->preference->item('site_name'),
-                'site_url'=>base_url()
+                'site_url'=>base_url(),
+                'import_id'=>$import_id
 		);
 		
 		//print_r($edata);

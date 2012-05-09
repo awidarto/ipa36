@@ -73,8 +73,8 @@ $config['galadinner_domestic'] = '450000';
 $config['galadinner_overseas'] = '40';
 $config['galadinner_sponsor'] = '0';
 
-$config['ba30'] = '30000';
-$config['ba150'] = '150000';
+$config['ba30'] = '30';
+$config['ba150'] = '150';
 
 $config['pro_domestic_label'] = 'Professional Domestic';
 $config['pro_overseas_label'] = 'Professional Overseas';

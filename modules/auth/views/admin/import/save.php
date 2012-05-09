@@ -3,12 +3,14 @@
     <li><?=$inserts_count;?> new user registered</li>
     <li><?=$updates_count;?> user data updated</li>
 </ul>
+<iframe height="600" width="800" src="<?php print base_url().'public/outbox/'.$import_id.'-group.html'; ?>"></iframe>
+
 <style>
     label .email{
         color:maroon;
     }
 </style>
-
+<!--
 <?php print form_open_multipart('auth/admin/import/upload',array('class'=>'horizontal'))?>
     <fieldset>
         <ol>
@@ -37,6 +39,8 @@
         </ol>
     </fieldset>
 <?php print form_close()?>
+-->
+
 
 <?php
 //print_r($inserts);

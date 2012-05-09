@@ -35,27 +35,27 @@
 					<td><?php print ($p['exhibitor'] == 0)?'no':'yes';?></td>
 					<td><?php 
 						if($p['ba30'] > 0 || $p['ba150'] > 0){
-							print 'IDR '.number_format($p['registertype'],2,',','.');
+							print 'USD '.number_format($p['registertype'],2,',','.');
 						}else{
 							print '-';
 						}
 					?></td>
-					<td><?php print number_format($p['golf'],2,',','.');?></td>
-					<td><?php print number_format($galadinner,2,',','.');?></td>
+					<td><?php print ($p['golf'] > 0)?number_format($p['golf'],2,',','.'):'-';?></td>
+					<td><?php print ($galadinner > 0)?number_format($galadinner,2,',','.'):'-';?></td>
 				</tr>
 <?php endforeach;?>
 				<tr>
 					<td rowspan="2" colspan="4">GRAND TOTAL</td>
 					<td><?php print ($total_con_idr > 0)?'IDR '.number_format($total_con_idr,2,',','.'):'-';?></td>
 					<td>-</td>
-					<td><?php print 'IDR '.number_format($total_con_ba,2,',','.');?></td>
-					<td><?php print number_format($total_golf,2,',','.');?></td>
-					<td><?php print number_format($total_galadinner,2,',','.');?></td>
+					<td>-</td>
+					<td><?php print ($total_golf > 0)?number_format($total_golf,2,',','.'):'-';?></td>
+					<td><?php print ($total_galadinner > 0)?number_format($total_galadinner,2,',','.'):'-';?></td>
 				</tr>
 				<tr>
 					<td><?php print ($total_con_usd > 0)?'USD '.number_format($total_con_usd,2,',','.'):'-';?></td>
 					<td>-</td>
-					<td>-</td>
+					<td><?php print ($total_con_ba > 0)?'USD '.number_format($total_con_ba,2,',','.'):'-';?></td>
 					<td>-</td>
 					<td>-</td>
 				</tr>

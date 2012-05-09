@@ -33,7 +33,7 @@
 <body>
 	<p>
 		Jakarta, {reg_date}<br />
-		Subject	: Notification Letter for Group
+		Subject	: Notification Letter for <?php print ($importasgroup)?'Group':'Grouped Individuals'?>
 	</p>
 	<p>
 		For the attention of:<br />
@@ -83,13 +83,13 @@
 					<td  colspan="2" class="right"><strong>TOTAL AMOUNT</strong></td><td></td>
 				</tr>
 				<tr>
-					<td  colspan="2" class="right">IDR</td><td class="right">{total_idr}</td>
+					<td  colspan="2" class="right">IDR </td><td class="right">{total_idr}</td>
 				</tr>
 				<tr>
 					<td  colspan="2" class="right">VAT 10%</td><td class="right">{vat_idr}</td>
 				</tr>
 				<tr>
-					<td  colspan="2" class="right">USD</td><td class="right">{total_usd}</td>
+					<td  colspan="2" class="right">USD </td><td class="right">{total_usd}</td>
 				</tr>
 				<tr>
 					<td  colspan="2" class="right">VAT 10%</td><td class="right">{vat_usd}</td>
@@ -98,10 +98,10 @@
 					<td  colspan="2" class="right"><strong>GRAND TOTAL</strong></td><td></td>
 				</tr>
 				<tr>
-					<td  colspan="2" class="right">IDR</td><td class="right">{grand_idr}</td>
+					<td  colspan="2" class="right">IDR </td><td class="right">{grand_idr}</td>
 				</tr>
 				<tr>
-					<td  colspan="2" class="right">USD</td><td class="right">{grand_usd}</td>
+					<td  colspan="2" class="right">USD </td><td class="right">{grand_usd}</td>
 				</tr>
 			</tbody>
 		</table>
@@ -129,6 +129,9 @@
 		<strong>Quad MICE Management</strong><br />
 		Co-Organizer of the 36th IPA Convention & Exhibition
 	</p>
+
+<?php if($importasgroup):?>
+
 	<p class="pagebreak"></p>
 	<style type="text/css">
 		.liner{
@@ -211,6 +214,7 @@
 		Date		: <br />
 		PIC Signature	:
 	</p>
+<?php endif;?>
 
 </body>
 </html>
