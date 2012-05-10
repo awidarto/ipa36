@@ -74,6 +74,11 @@
                     <input type="radio" value="no" name="sendmember" id="sendmember" checked="checked"/>No
                 </li>
                 <li>
+                    <label for="sendpass">Send Notification to PIC :</label>
+                    <input type="radio" value="yes" name="sendpic" id="sendpic" checked="checked" />Yes
+                    <input type="radio" value="no" name="sendpic" id="sendpic" />No
+                </li>                
+                <li>
                     <label for="sendpass">Send User Information Detail to PIC :</label>
                     <input type="radio" value="yes" name="sendpass" id="sendpass" checked="checked" />Yes
                     <input type="radio" value="no" name="sendpass" id="sendpass" />No

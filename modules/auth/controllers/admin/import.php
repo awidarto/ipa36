@@ -218,6 +218,7 @@ class Import extends Admin_Controller
         $companyphone = $this->input->post('phone');
         $companynpwp = $this->input->post('npwp');
 	    $sendmember = $this->input->post('sendmember');
+        $sendpic = $this->input->post('sendpic');
 	    $sendpass = $this->input->post('sendpass');
 	    $forceupdate = $this->input->post('forceupdate');
 
@@ -682,7 +683,9 @@ class Import extends Admin_Controller
             // send to individual
         }
         
-        $this->_sendtopic($picemail,$picname,$picmobile,$company,$companyphone,$companynpwp,$companyaddress,$summarydata,$sendpass,$forceupdate,$importasgroup,$import_id);
+        if($sendpic){
+            $this->_sendtopic($picemail,$picname,$picmobile,$company,$companyphone,$companynpwp,$companyaddress,$summarydata,$sendpass,$forceupdate,$importasgroup,$import_id);
+        }
         
 		$data['inserts_count'] = $inserts;
 		$data['updates_count'] = $updates;
