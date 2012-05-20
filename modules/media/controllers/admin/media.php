@@ -953,12 +953,13 @@
         }
 
         
-        function printinvoice($uid,$tax){
+        function printinvoice($uid,$tax,$cc){
             $user= $this->docs->fetch('Users', '*', null, array('id'=>$uid));
             $users = $user->row_array();
             $user= $this->docs->fetch('UserProfiles', '*', null, array('user_id'=>$uid));
             $data['user'] = array_merge($users,$user->row_array());
             $data['tax'] = ($tax == 'yes')?true:false;
+            $data['cc'] = ($cc == 'yes')?true:false;
 
             $this->load->module_view('media','admin/invoice_print',$data);
         }
@@ -989,12 +990,13 @@
             $this->load->module_view('media','admin/receipt_overlay',$data);
         }
         
-        function printreceipt($uid,$tax){
+        function printreceipt($uid,$tax,$cc){
             $user= $this->docs->fetch('Users', '*', null, array('id'=>$uid));
             $users = $user->row_array();
             $user= $this->docs->fetch('UserProfiles', '*', null, array('user_id'=>$uid));
             $data['user'] = array_merge($users,$user->row_array());
             $data['tax'] = ($tax == 'yes')?true:false;
+            $data['cc'] = ($cc == 'yes')?true:false;
 
             $this->load->module_view('media','admin/receipt_print',$data);
         }

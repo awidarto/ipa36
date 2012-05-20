@@ -106,7 +106,8 @@
             
         </td>
         <td>
-            <input type="checkbox" id="ppn" value="yes" />Add PPN(10%) 
+            <input type="checkbox" id="ppn" value="yes" />Add PPN(10%)<br />
+            <input type="checkbox" id="cc" value="yes" />Add CC Charges(2.5%)
         </td>
         <td style="width:15%">
         </td>
@@ -125,6 +126,11 @@
         }else{
             ppn = "no";
         }
-        window.open('<?=base_url();?>media/admin/media/printinvoice/<?=$user['id']?>/'+ppn+'/<?=time();?>', '_blank', 'width=800,height=600,scrollbars=yes,status=no,resizable=no,screenx=100,screeny=100');
+        if($('#cc:checked').val() !== undefined){
+            cc = "yes";
+        }else{
+            cc = "no";
+        }
+        window.open('<?=base_url();?>media/admin/media/printinvoice/<?=$user['id']?>/'+ppn+'/'+cc +'/<?=time();?>', '_blank', 'width=800,height=600,scrollbars=yes,status=no,resizable=no,screenx=100,screeny=100');
     }
 </script>

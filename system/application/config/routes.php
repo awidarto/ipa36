@@ -104,6 +104,7 @@ $route['media/admin/boothbuyer/deletefile'] = 'media/admin/boothbuyer/deletefile
 $route['media/admin/boothbuyer/:any'] = 'media/admin/boothbuyer';
 
 $route['media/admin/outbox/deletefile'] = 'media/admin/outbox/deletefile';
+$route['media/admin/outbox/doprint/(:num)'] = 'media/admin/outbox/doprint/$1';
 $route['media/admin/outbox/:any'] = 'media/admin/outbox';
 
 //

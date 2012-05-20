@@ -68,7 +68,7 @@
             1
         </td>
         <td>
-            Payment for Participant at The 35th Annual IPA Convention & Exhibition 2011
+            Payment for Participant at The 36th Annual IPA Convention & Exhibition 2012
         </td>
         <td style="width:5%">
             PAX
@@ -103,7 +103,18 @@
         </td>
     <tr/>
 
+<?php
+    $usd_tax = 0;
+    $idr_tax = 0;
+    $usd_cc = 0;
+    $idr_cc = 0;
+?>
+
 <?php if($tax == true):?>
+    <?php
+        $usd_tax = $user['total_usd']*0.1;
+        $idr_tax = $user['total_idr']*0.1;
+    ?>
     <tr>
         <td colspan="4">&nbsp;
             
@@ -112,30 +123,69 @@
             PPN(10%)
         </td>
         <td style="width:15%">
-            <?php print ($user['total_usd'] == 0)?'':'USD '.$user['total_usd']*0.1.'<br />'?>
+            <?php print ($user['total_usd'] == 0)?'':'USD '.$usd_tax.'<br />'?>
         </td>
         <td style="width:15%">
-            <?php print ($user['total_idr'] == 0)?'':'IDR '.$user['total_idr']*0.1.'<br />'?>
-        </td>
-    <tr/>
-    <tr>
-        <td colspan="4">&nbsp;
-            
-        </td>
-        <td>
-            PPN(10%)
-        </td>
-        <td style="width:15%">
-            <?php print ($user['total_usd'] == 0)?'':'USD '.$user['total_usd']*1.1.'<br />'?>
-        </td>
-        <td style="width:15%">
-            <?php print ($user['total_idr'] == 0)?'':'IDR '.$user['total_idr']*1.1.'<br />'?>
+            <?php print ($user['total_idr'] == 0)?'':'IDR '.$idr_tax.'<br />'?>
         </td>
     <tr/>
 
 <?php endif;?>
+<?php if($cc == true):?>
+    <?php
+        $usd_cc = $user['total_usd']*0.025;
+        $idr_cc = $user['total_idr']*0.025;
+    ?>
+    <tr>
+        <td colspan="4">&nbsp;
+            
+        </td>
+        <td>
+            CC Charges(2.5%)
+        </td>
+        <td style="width:15%">
+            <?php print ($user['total_usd'] == 0)?'':'USD '.$usd_cc.'<br />';?>
+        </td>
+        <td style="width:15%">
+            <?php print ($user['total_idr'] == 0)?'':'IDR '.$idr_cc.'<br />';?>
+        </td>
+    </tr>
+<?php endif;?>
 
-    
+    <tr>
+        <td colspan="4">&nbsp;
+            
+        </td>
+        <td>
+            Grand Total
+        </td>
+        <td style="width:15%">
+            <?php 
+
+                //print_r($user);
+
+                if($user['total_usd'] == 0){
+                    $grand_usd = '';
+                    print $grand_usd.'<br />';
+                }else{
+                    $grand_usd = (int)$user['total_usd'] + $idr_cc + $idr_tax;
+                    print 'USD '.$grand_usd.'<br />';
+                }
+            ?>
+        </td>
+        <td style="width:15%">
+            <?php 
+                if($user['total_idr'] == 0){
+                    $grand_idr = '';
+                    print $grand_idr.'<br />';
+                }else{
+                    $grand_idr = (int)$user['total_idr'] + $idr_cc + $idr_tax;
+                    print 'IDR '.$grand_idr.'<br />';
+                }
+            ?>
+        </td>
+    <tr/>
+
 </table>
 
     <script language=javascript>

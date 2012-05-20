@@ -3,6 +3,7 @@
     <li><?=$inserts_count;?> new user registered</li>
     <li><?=$updates_count;?> user data updated</li>
 </ul>
+<?php print anchor_popup('media/admin/outbox/doprint/'.$import_id,'Print This Notification'); ?>
 <iframe height="600" width="800" src="<?php print base_url().'public/outbox/'.$import_id.'-group.html'; ?>"></iframe>
 
 <style>

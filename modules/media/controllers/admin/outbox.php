@@ -569,6 +569,23 @@
             }
         }
 
+        function doprint($import_id){
+            $notifmail = file_get_contents($this->config->item('public_folder').'outbox/'.$import_id.'-group.html');
+            
+            $print_js = '<script language=javascript>
+                    function printWindow() {
+                        bV = parseInt(navigator.appVersion);
+                        if (bV >= 4) window.print();
+                    }
+                    printWindow();
+                    window.close();
+                </script>';
+
+            $notifmail = str_replace('</body>', $print_js.'</body>',$notifmail);
+
+            print $notifmail;
+        }
+
     	function gen($fid = null)
     	{	
             if(!is_null($fid)){

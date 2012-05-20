@@ -227,7 +227,10 @@ thead th {
         <tr class="left_align">
             <td class="middle top"  style="padding: 5px 2px;"><?=$row->id;?></td>
             <td class="middle top"  style="padding: 5px 2px;"><?=date('d-m-Y',human_to_unix($row->timesent));?></td>
-            <td class="middle top"  style="padding: 5px 2px;"><?=$row->import_id;?></td>
+            <td class="middle top"  style="padding: 5px 2px;">
+                <?=$row->import_id;?><br />
+                <?php print anchor_popup('media/admin/outbox/doprint/'.$row->import_id,'Print'); ?>
+            </td>
             <td class="middle top"  style="padding: 5px 2px;"><?=$row->sendfrom;?></td>
             <td class="middle top"  style="padding: 5px 2px;"><?=$row->sendto;?></td>
             <td class="middle top"  style="padding: 5px 2px;"><?=$row->cc;?></td>
