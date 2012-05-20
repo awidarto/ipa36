@@ -67,7 +67,7 @@
             1
         </td>
         <td>
-            Payment for Participant at The 35th Annual IPA Convention & Exhibition 2011
+            Payment for Participant at The 36th Annual IPA Convention & Exhibition 2012
         </td>
         <td style="width:5%">
             PAX
